@@ -1,3 +1,11 @@
+@import url('styles/wrapper.css'); 
+@import url('styles/buttons.css'); 
+@import url('styles/header.css'); 
+@import url('styles/logo.css'); 
+@import url('styles/container.css'); 
+@import url('styles/panel.css'); 
+@import url('styles/playlist.css'); 
+
 @font-face {
   font-family: "Roboto";
   src: url("./fonts/Roboto-Regular.eot?") format("eot"),
@@ -40,6 +48,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --primary: #121212;
+  --secondary: #fff;
+  --accent: #f6bd41;
+  --primary_bg: rgba(29, 29, 29, 1);
+  --secondary_bg: rgba(150, 150, 150, 1);
 }
 
 body {

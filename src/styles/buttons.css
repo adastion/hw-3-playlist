@@ -1,0 +1,8 @@
+.btn {
+  background: var(--accent);
+  color: var(--primary);
+}
+.btn--list {
+}
+.btn--grid {
+}

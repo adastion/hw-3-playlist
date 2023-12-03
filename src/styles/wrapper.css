@@ -1,0 +1,5 @@
+.wrapper {
+  background: var(--primary);
+  color: var(--secondary);
+  min-height: 100vh;
+}
