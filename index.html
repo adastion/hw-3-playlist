@@ -22,7 +22,10 @@
       <form action="/">
         <div class="search">
           <label for="searchtrack"></label>
-          <input id="searchtrack" type="search">
+          <input id="searchtrack" type="search" placeholder="input search">
+          <svg>
+            <use xlink:href="src/images/sprite-icon.svg#icon-search"></use>
+          </svg>
           <label for="searchCategory"></label>
           <select id="searchCategory" name="search-category" class="search-category">
             <option value="genre" selected>genre</option>
@@ -35,10 +38,14 @@
           </select>
         </div>
         <button class="btn btn--list">
-          <img src="" alt="icon">
+          <svg>
+            <use xlink:href="src/images/sprite-icon.svg#icon-list"></use>
+          </svg>
         </button>
         <button class="btn btn--grid">
-          <img src="" alt="icon">
+          <svg>
+            <use xlink:href="src/images/sprite-icon.svg#icon-grid"></use>
+          </svg>
         </button>
       </form>
     </div>
@@ -47,7 +54,7 @@
     <ul class="playlist__list">
       <li class="palylist__item">
         <div class="playlist__cover">
-          <img src="" alt="cover">
+          <img src="src/images/cover-01.jpg" alt="cover">
         </div>
         <section class="playlist__track">
           <h2 class="palaylist__track-title">
