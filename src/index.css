@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.eot?") format("eot"),
+    url("./fonts/Roboto-Regular.woff2") format("woff2"),
+    url("./fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("./fonts/SFUIDisplay-Regular.eot?") format("eot"),
+    url("./fonts/SFUIDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/SFUIDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("./fonts/SFUIDisplay-Medium.eot?") format("eot"),
+    url("./fonts/SFUIDisplay-Medium.eot") format("woff2"),
+    url("./fonts/SFUIDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF UI Display";
+  src: url("./fonts/SFUIDisplay-Bold.eot?") format("eot"),
+    url("./fonts/SFUIDisplay-Bold.eot") format("woff2"),
+    url("./fonts/SFUIDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "SF UI Display", sans-serif;
+}
