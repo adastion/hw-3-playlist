@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="src/index.css">
+  <title>in-play-list</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="#"><img src="src/images/logo.svg" alt="logo"></a>
+    </div>
+  </header>
+  <section class="panel">
+    <div class="container">
+      <h1 class="title">my playlists</h1>
+      <div class="add-plalist"><button class="btn">add playlist</button></div>
+      <form action="/">
+        <div class="search">
+          <label for="searchtrack"></label>
+          <input id="searchtrack" type="search">
+          <label for="searchCategory"></label>
+          <select id="searchCategory" name="search-category" class="search-category">
+            <option value="genre" selected>genre</option>
+            <option value="actor">actor</option>
+          </select>
+          <label for="sortCategory">sort by:</label>
+          <select id="sortCategory" name="sort-category" class="sort-category">
+            <option value="name" selected>name</option>
+            <option value="alphabetically">alphabetically</option>
+          </select>
+        </div>
+        <button class="btn btn--list">
+          <img src="" alt="icon">
+        </button>
+        <button class="btn btn--grid">
+          <img src="" alt="icon">
+        </button>
+      </form>
+    </div>
+  </section>
+  <article class="playlist">
+    <ul class="playlist__list">
+      <li class="palylist__item">
+        <div class="playlist__cover">
+          <img src="" alt="cover">
+        </div>
+        <section class="playlist__track">
+          <h2 class="palaylist__track-title">
+            <span class="playlist__actor">ublic Enemy</span> - 
+            <span class="playlist__track-name">Fight the Power</span>
+          </h2>
+          <audio src="/" class="playlist__audio" controls></audio>
+        </section>
+      </li>
+    </ul>
+  </article>
+  <script src="src/index.js"></script>
+</body>
+
+</html>
