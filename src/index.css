@@ -1,9 +1,11 @@
 @import url('styles/wrapper.css'); 
 @import url('styles/buttons.css'); 
+@import url('styles/title.css'); 
 @import url('styles/header.css'); 
 @import url('styles/logo.css'); 
 @import url('styles/container.css'); 
 @import url('styles/panel.css'); 
+@import url('styles/form.css'); 
 @import url('styles/playlist.css'); 
 
 @font-face {
@@ -65,4 +67,5 @@ ul[class] {
 
 body {
   font-family: "SF UI Display", sans-serif;
+  font-size: 16px;
 }

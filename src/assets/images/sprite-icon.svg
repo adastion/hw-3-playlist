@@ -11,7 +11,7 @@
   </symbol>
   <symbol  viewBox="0 0 24 24" id="arrow-up">
     <g id="Group 378">
-      <path id="Vector 12" d="M17 15L12 10L7 15" stroke="currentColor"></path>
+      <path id="Vector 12" d="M17 15L12 10L7 15" stroke="currentColor" fill="none"></path>
     </g>
   </symbol>
   <symbol  viewBox="0 0 16 16" id="icon-drag-track">

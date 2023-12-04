@@ -18,37 +18,44 @@
     </header>
     <section class="panel">
       <div class="container">
-        <h1 class="title">my playlists</h1>
-        <div class="add-plalist"><button class="btn">add playlist</button></div>
-        <form action="/">
-          <div class="search">
-            <label for="searchtrack"></label>
-            <input id="searchtrack" type="search" placeholder="input search">
-            <svg>
-              <use xlink:href="src/assets/images/sprite-icon.svg#icon-search"></use>
-            </svg>
+        <div class="panel__wrapper-title">
+          <h1 class="title">my playlists</h1>
+          <div class="add-plalist"><button class="btn">add playlist</button></div>
+        </div>
+        <div class="panel__form-wrapper">
+          <form class="form" action="/">
+            <label class="form__wrapper" for="searchtrack">
+              <svg>
+                <use xlink:href="src/assets/images/sprite-icon.svg#icon-search"></use>
+              </svg>
+              <input class="form__search-input" id="searchtrack" type="search" placeholder="input search">
+            </label>
             <label for="searchCategory"></label>
-            <select id="searchCategory" name="search-category" class="search-category">
+            <select class="form__category" id="searchCategory" name="search-category">
               <option value="genre" selected>genre</option>
               <option value="actor">actor</option>
             </select>
-            <label for="sortCategory">sort by:</label>
-            <select id="sortCategory" name="sort-category" class="sort-category">
-              <option value="name" selected>name</option>
-              <option value="alphabetically">alphabetically</option>
-            </select>
+            <h5>sort by:</h5>
+            <button class="form__btn-sort">
+              <span>name</span>
+              <svg>
+                <use xlink:href="src/assets/images/sprite-icon.svg#arrow-up"></use>
+              </svg>
+            </button>
+          </form>
+          <div class="panel__buttons-wrapper">
+            <button class="btn btn--view-module active">
+              <svg>
+                <use xlink:href="src/assets/images/sprite-icon.svg#icon-list"></use>
+              </svg>
+            </button>
+            <button class="btn btn--view-module">
+              <svg>
+                <use xlink:href="src/assets/images/sprite-icon.svg#icon-grid"></use>
+              </svg>
+            </button>
           </div>
-          <button class="btn btn--view-module active">
-            <svg>
-              <use xlink:href="src/assets/images/sprite-icon.svg#icon-list"></use>
-            </svg>
-          </button>
-          <button class="btn btn--view-module">
-            <svg>
-              <use xlink:href="src/assets/images/sprite-icon.svg#icon-grid"></use>
-            </svg>
-          </button>
-        </form>
+        </div>
       </div>
     </section>
     <article class="playlist">

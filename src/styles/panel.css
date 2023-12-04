@@ -1,12 +1,36 @@
-.panel {
+.panel .conatiner {
+  display: flex;
+  align-items: center;
 }
 
-.add-plalist {
+.panel .conatiner + * {
+  margin-top: 36px;
 }
 
-.search {
+.panel__wrapper-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.search-category {
+
+.panel__form-wrapper,
+.panel__buttons-wrapper {
+  display: flex;
 }
-.sort-category {
+
+.panel__form-wrapper {
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 36px;
+}
+
+.panel__buttons-wrapper {
+  gap: 10px;
+}
+
+.add-plalist .btn {
+  height: 36px;
+  padding-left: 36px;
+  padding-right: 36px;
 }

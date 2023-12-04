@@ -1,3 +1,11 @@
 .header {
   background: var(--primary_bg);
+  height: 48px;
+}
+
+.header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
 }
