@@ -1,8 +1,36 @@
 .btn {
   background: var(--accent);
   color: var(--primary);
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 4px;
+  transition: transform .2s;
 }
-.btn--list {
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.05);
 }
-.btn--grid {
+
+.btn.btn--view-module {
+  background: var(--primary_bg);
+  color: var(--secondary);
+  border: 1px solid var(--secondary_bg);
+}
+
+.btn.btn--view-module svg {
+  width: 24px;
+  height: 24px;
+}
+
+.btn.btn--view-module.active {
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
 }

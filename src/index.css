@@ -50,6 +50,11 @@
   padding: 0;
 }
 
+ol[class],
+ul[class] {
+  list-style: none;
+}
+
 :root {
   --primary: #121212;
   --secondary: #fff;
