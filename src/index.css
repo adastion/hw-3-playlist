@@ -4,8 +4,10 @@
 @import url('styles/header.css'); 
 @import url('styles/logo.css'); 
 @import url('styles/container.css'); 
+@import url('styles/content.css'); 
 @import url('styles/panel.css'); 
 @import url('styles/form.css'); 
+@import url('styles/sort.css'); 
 @import url('styles/playlist.css'); 
 
 @font-face {

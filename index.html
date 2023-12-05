@@ -16,34 +16,36 @@
         <a class="logo" href="#"><img src="src/assets/images/logo.svg" alt="logo"></a>
       </div>
     </header>
-    <section class="panel">
+    <section class="content">
       <div class="container">
-        <div class="panel__wrapper-title">
+        <div class="content__header">
           <h1 class="title">my playlists</h1>
-          <div class="add-plalist"><button class="btn">add playlist</button></div>
+          <div class="content__buttons"><button class="btn add-plalist">add playlist</button></div>
         </div>
-        <div class="panel__form-wrapper">
+        <div class="panel">
           <form class="form" action="/">
-            <label class="form__wrapper" for="searchtrack">
+            <label class="form__search" for="searchtrack">
               <svg>
                 <use xlink:href="src/assets/images/sprite-icon.svg#icon-search"></use>
               </svg>
-              <input class="form__search-input" id="searchtrack" type="search" placeholder="input search">
+              <input class="form__input" id="searchtrack" type="search" placeholder="input search">
             </label>
             <label for="searchCategory"></label>
             <select class="form__category" id="searchCategory" name="search-category">
               <option value="genre" selected>genre</option>
               <option value="actor">actor</option>
             </select>
-            <h5>sort by:</h5>
-            <button class="form__btn-sort">
-              <span>name</span>
+          </form>
+          <div class="sort">
+            <span class="sort__title">sort by:</span>
+            <button class="sort__btn">
+              <span class="sort__by-name">name</span>
               <svg>
                 <use xlink:href="src/assets/images/sprite-icon.svg#arrow-up"></use>
               </svg>
             </button>
-          </form>
-          <div class="panel__buttons-wrapper">
+          </div>
+          <div class="panel__buttons">
             <button class="btn btn--view-module active">
               <svg>
                 <use xlink:href="src/assets/images/sprite-icon.svg#icon-list"></use>
