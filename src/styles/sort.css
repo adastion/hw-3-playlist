@@ -1,8 +1,36 @@
 .sort {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
 }
-.sort__title {
+
+.sort__title + * {
+  margin-left: 5px;
 }
+
 .sort__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: dotted;
+  background: none;
+  border: none;
+  border-bottom: 2px dotted var(--accent);
+  color: var(--accent);
+  text-transform: inherit;
+  font-size: inherit;
+  cursor: pointer;
 }
-.sort__by-name {
+
+.sort__btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.sort__btn svg.discending {
+  transform: rotate(180deg);
+}
+
+.sort__btn svg.ascending {
+  transform: rotate(0);
 }

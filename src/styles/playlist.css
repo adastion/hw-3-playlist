@@ -1,18 +1,47 @@
 .playlist {
+  margin-top: 36px;
 }
+
 .playlist__list {
+  display: grid;
+  gap: 12px;
 }
+
 .palylist__item {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: var(--primary_bg);
+  border-radius: 4px;
+  gap: 12px;
 }
+
 .playlist__cover {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  overflow: hidden;
 }
+
+.playlist__cover img {
+  object-fit: cover;
+}
+
 .playlist__track {
 }
+
 .palaylist__track-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
 }
+
 .playlist__actor {
 }
+
 .playlist__track-name {
+  color: var(--secondary_bg);
 }
+
 .playlist__audio {
 }

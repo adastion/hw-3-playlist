@@ -59,6 +59,10 @@ ul[class] {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 :root {
   --primary: #121212;
   --secondary: #fff;
