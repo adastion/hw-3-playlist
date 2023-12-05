@@ -2,8 +2,13 @@
 }
 
 .content__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.content__buttons {
-  
+.content__add-btn {
+  font-weight: 600;
+  line-height: 22px;
+  padding: 6px 36px;
 }
