@@ -9,6 +9,8 @@
 @import url('styles/form.css'); 
 @import url('styles/sort.css'); 
 @import url('styles/playlist.css'); 
+@import url('styles/categories.css'); 
+@import url('styles/player.css'); 
 
 @font-face {
   font-family: "Roboto";
