@@ -12,3 +12,10 @@
   line-height: 22px;
   padding: 6px 36px;
 }
+
+@media screen and (max-width: 768px) {
+  .content__header {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}

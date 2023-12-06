@@ -1,6 +1,6 @@
 .categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(375px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(345px, auto));
   gap: 12px;
 }
 .categories__block {
@@ -26,42 +26,11 @@
   position: relative;
   z-index: 1;
   width: 100%;
+  align-self: center;
 }
 
 .categories__cover:hover .categories__cover::before {
   opacity: 1;
-}
-
-.categories__cover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 3;
-  opacity: 0;
-}
-
-.categories__cover::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  clip-path: polygon(0 0, 0 100%, 100% 50%);
-  background: var(--secondary_bg);
-  z-index: 4;
-  transition: 0.2s ease-in-out;
-  opacity: 0;
-}
-
-.categories__cover:hover::after {
-  cursor: pointer;
-  transform: translate(-50%, -50%) scale(1.05);
 }
 
 .categories__info {
@@ -92,4 +61,21 @@
 .categories__number-of-songs,
 .categories__top-songs span {
   color: var(--secondary_bg);
+}
+
+@media screen and (max-width: 992px) {
+  .categories__block {
+    padding: 20px 15px 36px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .categories__block {
+    grid-template-columns: 1fr;
+    padding: 15px 10px 20px;
+  }
+
+  .categories__info {
+    grid-row: 1/2;
+  }
 }
