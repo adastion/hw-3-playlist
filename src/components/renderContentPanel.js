@@ -1,9 +1,12 @@
+import { containerElement } from "./containerElement.js";
+import { renderPanel } from "./renderPanel.js";
+
 export function renderContentPanel(parentItem) {
   const contentPanelElement = document.createElement("section");
   contentPanelElement.classList.add("content");
-  const containerElement = document.createElement("div");
-  containerElement.classList.add("container");
-  contentPanelElement.appendChild(containerElement);
+
+  const container = containerElement();
+  contentPanelElement.appendChild(container);
 
   const contentHeaderElement = document.createElement("div");
   contentHeaderElement.classList.add("content__header");
@@ -15,8 +18,9 @@ export function renderContentPanel(parentItem) {
   addButtonContent.classList.add("btn", "content__add-btn");
   addButtonContent.textContent = "add playlist";
 
-  containerElement.appendChild(title);
-  containerElement.appendChild(addButtonContent);
+  container.appendChild(title);
+  container.appendChild(addButtonContent);
 
   parentItem.appendChild(contentPanelElement);
+  renderPanel(container);
 }
