@@ -1,7 +1,8 @@
 import { getPlaylist } from "./../data.js";
 
-export function renderTracks() {
-  const listTracksElement = document.querySelector(".playlist__list");
+export function renderTracks(parentItem) {
+  const listTracksElement = document.createElement("ul");
+  listTracksElement.classList.add("playlist__list");
 
   const trackList = getPlaylist();
 
@@ -45,5 +46,7 @@ export function renderTracks() {
     audioWrapper.appendChild(songElement);
     treckElement.appendChild(audioWrapper);
     listTracksElement.appendChild(treckElement);
+
+    parentItem.appendChild(listTracksElement);
   });
 }

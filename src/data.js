@@ -1,3 +1,7 @@
+const pathStatic = {
+  pathLogo: "src/assets/images/logo.svg",
+};
+
 const playlist = {
   title: "Hip-Hop Hits",
   songs: [
@@ -121,3 +125,6 @@ export function getPlaylist() {
   return playlist.songs;
 }
 
+export function getPathStatic() {
+   return pathStatic
+}
