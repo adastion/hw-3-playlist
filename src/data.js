@@ -1,9 +1,9 @@
-const plalist = {
+const playlist = {
   title: "Hip-Hop Hits",
   songs: [
     {
       id: 1,
-      artist: "Public Enemy",
+      musician: "Public Enemy",
       songName: "Fight the Power",
       year: 1989,
       isHot: false,
@@ -17,13 +17,14 @@ const plalist = {
     },
     {
       id: 2,
-      artist: "Vanilla Ice",
+      musician: "Vanilla Ice",
       songName: "Ice Ice Baby",
       year: 1990,
       isHot: false,
       fileUrl:
         "https://s2.deliciouspeaches.com/get/cuts/5a/2e/5a2eb044cf9eb6aa3ff2649727976ac0/63186026/Vanila_Ice_-_ice_ice_baby_b128f0d301.mp3",
-      cover: "https://www.example.com/vanilla-ice-ice-ice-baby-cover.jpg",
+      cover:
+        "https://www.16bars.de/wp-content/uploads/2005/11/200px-brandnubian.jpg",
       info: {
         duration: "4:29",
         totalTracksCount: 10,
@@ -31,7 +32,7 @@ const plalist = {
     },
     {
       id: 3,
-      artist: "MC Hammer",
+      musician: "MC Hammer",
       songName: "You Can't Touch This",
       year: 1990,
       isHot: false,
@@ -45,7 +46,7 @@ const plalist = {
     },
     {
       id: 4,
-      artist: "Brand Nubian",
+      musician: "Brand Nubian",
       songName: "Brand Nubian",
       year: 1990,
       isHot: false,
@@ -59,7 +60,7 @@ const plalist = {
     },
     {
       id: 5,
-      artist: "50 Cent",
+      musician: "50 Cent",
       songName: "In da Club",
       year: 2003,
       isHot: false,
@@ -73,7 +74,7 @@ const plalist = {
     },
     {
       id: 6,
-      artist: "DMX",
+      musician: "DMX",
       songName: "X Gon' Give It To Ya",
       year: 2003,
       isHot: false,
@@ -87,7 +88,7 @@ const plalist = {
     },
     {
       id: 7,
-      artist: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
+      musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
       songName: "You Don't Know",
       year: 2006,
       isHot: false,
@@ -101,7 +102,7 @@ const plalist = {
     },
     {
       id: 8,
-      artist: "Eminem",
+      musician: "Eminem",
       songName: "Rap God",
       year: 2013,
       isHot: true,
@@ -115,3 +116,8 @@ const plalist = {
     },
   ],
 };
+
+export function getPlaylist() {
+  return playlist.songs;
+}
+
