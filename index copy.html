@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="src/index.css">
+  <title>in-play-list</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <a class="logo" href="#"><img src="src/assets/images/logo.svg" alt="logo"></a>
+      </div>
+    </header>
+    <section class="content">
+      <div class="container">
+        <div class="content__header">
+          <h1 class="title">my playlists</h1>
+          <button class="btn content__add-btn">add playlist</button>
+        </div>
+        <div class="panel">
+          <form class="form" action="/">
+            <label class="form__search" for="searchtrack">
+              <svg>
+                <use xlink:href="src/assets/images/sprite-icon.svg#icon-search"></use>
+              </svg>
+              <input class="form__input" id="searchtrack" type="search" placeholder="input search">
+            </label>
+            <label for="searchCategory"></label>
+            <select class="form__category" id="searchCategory" name="search-category">
+              <option value="genre" selected>genre</option>
+              <option value="actor">actor</option>
+            </select>
+          </form>
+          <div class="sort">
+            <span class="sort__title">sort by:</span>
+            <button class="sort__btn">
+              <span>name</span>
+              <svg class="ascending">
+                <use xlink:href="src/assets/images/sprite-icon.svg#arrow-up"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="panel__buttons">
+            <button class="btn btn--view-module active">
+              <svg>
+                <use xlink:href="src/assets/images/sprite-icon.svg#icon-list"></use>
+              </svg>
+            </button>
+            <button class="btn btn--view-module">
+              <svg>
+                <use xlink:href="src/assets/images/sprite-icon.svg#icon-grid"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="playlist">
+      <div class="container">
+        <ul class="playlist__list">
+        
+        </ul>
+        <!-- <ul class="playlist__list">
+          <li class="palylist__item">
+            <div class="playlist__cover">
+              <img src="src/assets/images/cover-01.jpg" alt="cover">
+            </div>
+            <section class="playlist__track">
+              <h2 class="palaylist__track-title">
+                <span class="playlist__actor">public Enemy</span> -
+                <span class="playlist__track-name">Fight the Power</span>
+              </h2>
+              <audio src="src/assets/audio/Public_Enemy-Fight_The_Power.mp3" controls>           
+              </audio>
+              <div class="player">
+                <button class="player__play-button"></button>
+                <button class="player__mute-button"></button>
+                <span class="player__current-time-display"></span>
+                <span class="player__time-remaining-display"></span>
+                <div class="player__timeline"></div>
+              </div>
+            </section>
+          </li>
+        </ul> -->
+      </div>
+    </section>
+  </div>
+  <script src="src/index.js" type="module"></script>
+</body>
+
+</html>
