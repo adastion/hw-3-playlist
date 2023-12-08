@@ -1,6 +1,7 @@
 import { containerElement } from "./containerElement.js";
-import { renderForm } from "./renderForm.js";
-import { renderPanelButtons } from "./renderPanelButtons.js";
+import { renderForm } from "./form/renderForm.js";
+import { renderPanelButtons } from "./panel_buttons/renderPanelButtons.js";
+import { renderSort } from "./sort/renderSort.js";
 
 export function renderPanel(parentItem) {
   const container = containerElement();
@@ -10,6 +11,7 @@ export function renderPanel(parentItem) {
   container.appendChild(panelElement);
 
   renderForm(panelElement);
+  renderSort(panelElement);
   renderPanelButtons(panelElement);
 
   parentItem.appendChild(panelElement);
