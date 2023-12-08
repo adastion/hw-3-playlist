@@ -63,13 +63,14 @@
   color: var(--secondary_bg);
 }
 
-.playlist__audio {
-  background: red;
-}
-
 .playlist__track audio {
   height: 24px;
   margin-top: 10px;
+  filter: invert(1);
+}
+
+.playlist__track audio::-webkit-media-controls-enclosure {
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 992px) {
