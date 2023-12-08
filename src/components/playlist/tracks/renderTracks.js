@@ -1,8 +1,8 @@
-import { getPlaylist } from "./../data.js";
+import { getPlaylist } from "../../../data.js";
 
 export function renderTracks(parentItem) {
   const playlistWrapperElement = document.createElement("section");
-  playlistWrapperElement.classList.add("panel")
+  playlistWrapperElement.classList.add("panel");
   const listTracksElement = document.createElement("ul");
   listTracksElement.classList.add("playlist__list");
 
