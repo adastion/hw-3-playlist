@@ -20,6 +20,7 @@ export function renderContentPanel(parentItem) {
 
   container.appendChild(title);
   container.appendChild(addButtonContent);
+  
 
   parentItem.appendChild(contentPanelElement);
   renderPanel(container);
