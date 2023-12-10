@@ -126,5 +126,11 @@ export function getPlaylist() {
 }
 
 export function getPathStatic() {
-   return pathStatic
+  return pathStatic;
+}
+
+let subscriber;
+
+export function subscribe(listener) {
+  subscriber = listener;
 }
