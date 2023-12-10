@@ -134,3 +134,20 @@ let subscriber;
 export function subscribe(listener) {
   subscriber = listener;
 }
+
+// const sortSongs = getPlaylist();
+
+export function setSortSongs(sortSongs) {
+  sortSongs = sortSongs.sort((a, b) => {
+    let nameA = a.songName.toLocaleLowerCase();
+    let nameB = b.songName.toLocaleLowerCase();
+
+    subscriber();
+    if (nameA > nameB) {
+      return -1;
+    } else if (nameA < nameB) {
+      return 1;
+    }
+    return 0;
+  });
+}
