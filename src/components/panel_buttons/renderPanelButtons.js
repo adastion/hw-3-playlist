@@ -1,3 +1,28 @@
-export function renderPanelButtons (parentItem) {
-  
+import { iconElement } from "../iconElement.js";
+
+export function renderPanelButtons(parentItem) {
+  const buttonsElement = document.createElement("div");
+  buttonsElement.classList.add("panel__buttons");
+
+  const buttonListElement = document.createElement("button");
+  buttonListElement.classList.add("btn", "btn--view-module", "active");
+  buttonListElement.id = "btnList";
+
+  const iconListElement = iconElement(
+    "src/assets/images/sprite-icon.svg#icon-list"
+  );
+
+  const buttonGridElement = document.createElement("button");
+  buttonGridElement.classList.add("btn", "btn--view-module");
+  buttonGridElement.id = "btnGrid";
+
+  const iconGridElement = iconElement(
+    "src/assets/images/sprite-icon.svg#icon-grid"
+  );
+
+  buttonListElement.appendChild(iconListElement);
+  buttonGridElement.appendChild(iconGridElement);
+  buttonsElement.appendChild(buttonListElement);
+  buttonsElement.appendChild(buttonGridElement);
+  parentItem.appendChild(buttonsElement);
 }
