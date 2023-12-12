@@ -130,32 +130,30 @@ export function getPathStatic() {
 }
 
 let subscriber = null;
-let sortDirection = null;
+let sortDirection = {
+  direction: null,
+  selector: "descending",
+};
 
 export function subscribe(listener) {
   subscriber = listener;
 }
 
 export function setSortSongs(direction) {
-  sortDirection = direction;
-  playlist.songs.sort((a, b) => {
-    a.songName;
-    b.songName;
+  sortDirection.direction = direction;
+  sortDirection.selector = direction;
 
+  playlist.songs.sort((a, b) => {
     if (direction === "ascending") {
-      return (a.songName < b.songName) ? -1 : null;
-      return -1;
-    } else if (direction === "ascending") {
-      return (a.songName > b.songName) ? 1 : null;
-      return 1;
-      return b.songName - a.songName;
+      return a.songName.localeCompare(b.songName);
+    } else {
+      return b.songName.localeCompare(a.songName);
     }
   });
-  console.log(direction);
-  console.log(sortDirection);
+
   subscriber();
 }
 
-export function getSortDiraction() {
+export function getSortDirection() {
   return sortDirection;
 }
