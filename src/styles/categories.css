@@ -1,6 +1,6 @@
 .categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(345px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(380px, auto));
   gap: 12px;
 }
 .categories__block {
@@ -70,6 +70,10 @@
 }
 
 @media screen and (max-width: 545px) {
+  .categories {
+    grid-template-columns: repeat(auto-fit, minmax(345px, auto));
+  }
+
   .categories__block {
     grid-template-columns: 1fr;
     padding: 15px 10px 20px;

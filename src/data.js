@@ -126,5 +126,36 @@ export function getPlaylist() {
 }
 
 export function getPathStatic() {
-   return pathStatic
+  return pathStatic;
+}
+
+let subscriber = null;
+let sortDirection = null;
+
+export function subscribe(listener) {
+  subscriber = listener;
+}
+
+export function setSortSongs(direction) {
+  sortDirection = direction;
+  playlist.songs.sort((a, b) => {
+    a.songName;
+    b.songName;
+
+    if (direction === "ascending") {
+      return (a.songName < b.songName) ? -1 : null;
+      return -1;
+    } else if (direction === "ascending") {
+      return (a.songName > b.songName) ? 1 : null;
+      return 1;
+      return b.songName - a.songName;
+    }
+  });
+  console.log(direction);
+  console.log(sortDirection);
+  subscriber();
+}
+
+export function getSortDiraction() {
+  return sortDirection;
 }

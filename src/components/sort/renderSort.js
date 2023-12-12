@@ -1,3 +1,5 @@
+import { iconElement } from "../iconElement.js";
+
 export function renderSort(parentItem) {
   const sortElement = document.createElement("div");
   sortElement.classList.add("sort");
@@ -9,24 +11,13 @@ export function renderSort(parentItem) {
   const buttonElement = document.createElement("button");
   buttonElement.classList.add("sort__btn");
   buttonElement.type = "button";
+  buttonElement.id = "buttonSort";
 
   const textElement = document.createElement("span");
   textElement.textContent = "name";
 
-  const icon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  icon.classList.add("ascending");
+  const icon = iconElement("src/assets/images/sprite-icon.svg#arrow-up");
 
-  const iconArrow = document.createElementNS(
-    "http://www.w3.org/2000/svg",
-    "use"
-  );
-  iconArrow.setAttributeNS(
-    "http://www.w3.org/1999/xlink",
-    "href",
-    "src/assets/images/sprite-icon.svg#arrow-up"
-  );
-
-  icon.appendChild(iconArrow);
   buttonElement.appendChild(textElement);
   buttonElement.appendChild(icon);
   sortElement.appendChild(titleElement);
