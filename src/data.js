@@ -129,25 +129,33 @@ export function getPathStatic() {
   return pathStatic;
 }
 
-let subscriber;
+let subscriber = null;
+let sortDirection = null;
 
 export function subscribe(listener) {
   subscriber = listener;
 }
 
-// const sortSongs = getPlaylist();
+export function setSortSongs(direction) {
+  sortDirection = direction;
+  playlist.songs.sort((a, b) => {
+    a.songName;
+    b.songName;
 
-export function setSortSongs(sortSongs) {
-  sortSongs = sortSongs.sort((a, b) => {
-    let nameA = a.songName.toLocaleLowerCase();
-    let nameB = b.songName.toLocaleLowerCase();
-
-    subscriber();
-    if (nameA > nameB) {
+    if (direction === "ascending") {
+      return (a.songName < b.songName) ? -1 : null;
       return -1;
-    } else if (nameA < nameB) {
+    } else if (direction === "ascending") {
+      return (a.songName > b.songName) ? 1 : null;
       return 1;
+      return b.songName - a.songName;
     }
-    return 0;
   });
+  console.log(direction);
+  console.log(sortDirection);
+  subscriber();
+}
+
+export function getSortDiraction() {
+  return sortDirection;
 }

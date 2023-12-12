@@ -18,14 +18,6 @@ export function renderSort(parentItem) {
 
   const icon = iconElement("src/assets/images/sprite-icon.svg#arrow-up");
 
-  buttonElement.addEventListener("click", () => {
-    if (icon.classList.contains("")) {
-      icon.classList.toggle("ascending");
-    } else {
-      icon.classList.toggle("discending");
-    }
-  });
-
   buttonElement.appendChild(textElement);
   buttonElement.appendChild(icon);
   sortElement.appendChild(titleElement);
