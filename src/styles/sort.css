@@ -27,7 +27,7 @@
   height: 24px;
 }
 
-.sort__btn svg.discending {
+.sort__btn svg.descending  {
   transform: rotate(180deg);
 }
 
