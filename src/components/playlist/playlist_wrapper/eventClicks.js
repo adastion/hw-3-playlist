@@ -1,3 +1,4 @@
+import { getPlaylistWithInfo } from "../../../data.js";
 import { renderTracks } from "../tracks/renderTracks.js";
 import { renderCategories } from "./../../cadigories/renderCadigories.js";
 
@@ -15,7 +16,9 @@ export function eventClicks(parentItem) {
     btnGrid.classList.remove("active");
 
     localStorage.setItem("stateList", "list");
-    renderTracks(parentItem);
+    getPlaylistWithInfo().forEach((tracksList) => {
+      renderTracks(parentItem, tracksList.songs);
+    });
   });
 
   btnGrid.addEventListener("click", () => {
@@ -30,12 +33,16 @@ export function eventClicks(parentItem) {
   if (localStorage.getItem("stateList") === "list") {
     btnList.classList.add("active");
     btnGrid.classList.remove("active");
-    renderTracks(parentItem);
+
+    getPlaylistWithInfo().forEach((tracksList) => {
+      renderTracks(parentItem, tracksList.songs);
+    });
   }
 
   if (localStorage.getItem("stateList") === "grid") {
     btnGrid.classList.add("active");
     btnList.classList.remove("active");
+
     renderCategories(parentItem);
   }
 }

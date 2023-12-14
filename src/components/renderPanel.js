@@ -8,11 +8,11 @@ export function renderPanel(parentItem) {
 
   const panelElement = document.createElement("div");
   panelElement.classList.add("panel");
-  container.appendChild(panelElement);
+  container.append(panelElement);
 
   renderForm(panelElement);
   renderSort(panelElement);
   renderPanelButtons(panelElement);
 
-  parentItem.appendChild(panelElement);
+  parentItem.append(panelElement);
 }

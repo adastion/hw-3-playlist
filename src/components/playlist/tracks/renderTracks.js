@@ -1,14 +1,10 @@
-import { getPlaylist } from "../../../data.js";
-
-export function renderTracks(parentItem) {
+export function renderTracks(parentItem, tracksList) {
   const playlistWrapperElement = document.createElement("section");
   playlistWrapperElement.classList.add("panel");
   const listTracksElement = document.createElement("ul");
   listTracksElement.classList.add("playlist__list");
 
-  const trackList = getPlaylist();
-
-  trackList.map((song) => {
+  tracksList.map((song) => {
     const fileUrls = song.fileUrl;
     const cover = song.cover;
     const musicianName = song.musician;
@@ -22,8 +18,8 @@ export function renderTracks(parentItem) {
 
     const imageCoverElement = document.createElement("img");
     imageCoverElement.src = cover;
-    coverElement.appendChild(imageCoverElement);
-    treckElement.appendChild(coverElement);
+    coverElement.append(imageCoverElement);
+    treckElement.append(coverElement);
 
     const audioWrapper = document.createElement("section");
     audioWrapper.classList.add("playlist__track");
@@ -33,22 +29,22 @@ export function renderTracks(parentItem) {
     const musician = document.createElement("span");
     musician.classList.add("playlist__actor");
     musician.textContent = musicianName + " - ";
-    titleElement.appendChild(musician);
+    titleElement.append(musician);
 
     const songName = document.createElement("span");
     songName.classList.add("playlist__track-name");
     songName.textContent = nameTrack;
-    titleElement.appendChild(songName);
+    titleElement.append(songName);
 
-    audioWrapper.appendChild(titleElement);
+    audioWrapper.append(titleElement);
 
     const songElement = document.createElement("audio");
     songElement.controls = true;
     songElement.src = fileUrls;
-    audioWrapper.appendChild(songElement);
-    treckElement.appendChild(audioWrapper);
-    listTracksElement.appendChild(treckElement);
+    audioWrapper.append(songElement);
+    treckElement.append(audioWrapper);
+    listTracksElement.append(treckElement);
 
-    parentItem.appendChild(listTracksElement);
+    parentItem.append(listTracksElement);
   });
 }

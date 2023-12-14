@@ -13,8 +13,8 @@ export function renderSelectCategories (parentItem) {
   categoryActorElement.textContent = "actor"
   
 
-  selectElement.appendChild(categoryGenreElement)
-  selectElement.appendChild(categoryActorElement)
+  selectElement.append(categoryGenreElement)
+  selectElement.append(categoryActorElement)
 
-  parentItem.appendChild(selectElement)
+  parentItem.append(selectElement)
 }
