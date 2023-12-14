@@ -15,8 +15,8 @@ export function renderSearch(parentItem) {
   searchField.id = "searchTrack";
   searchField.placeholder = "input search";
 
-  formSearchElement.appendChild(searchField);
-  formSearchElement.appendChild(iconSearchElement);
+  formSearchElement.append(searchField);
+  formSearchElement.append(iconSearchElement);
 
-  parentItem.appendChild(formSearchElement);
+  parentItem.append(formSearchElement);
 }

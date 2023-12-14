@@ -9,5 +9,5 @@ export function renderForm(parentItem) {
   renderSearch(formElement)
   renderSelectCategories(formElement)
 
-  parentItem.appendChild(formElement)
+  parentItem.append(formElement)
 }

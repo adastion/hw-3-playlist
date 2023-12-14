@@ -18,10 +18,10 @@ export function renderSort(parentItem) {
 
   const icon = iconElement("src/assets/images/sprite-icon.svg#arrow-up");
 
-  buttonElement.appendChild(textElement);
-  buttonElement.appendChild(icon);
-  sortElement.appendChild(titleElement);
-  sortElement.appendChild(buttonElement);
+  buttonElement.append(textElement);
+  buttonElement.append(icon);
+  sortElement.append(titleElement);
+  sortElement.append(buttonElement);
 
-  parentItem.appendChild(sortElement);
+  parentItem.append(sortElement);
 }

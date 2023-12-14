@@ -20,9 +20,9 @@ export function renderPanelButtons(parentItem) {
     "src/assets/images/sprite-icon.svg#icon-grid"
   );
 
-  buttonListElement.appendChild(iconListElement);
-  buttonGridElement.appendChild(iconGridElement);
-  buttonsElement.appendChild(buttonListElement);
-  buttonsElement.appendChild(buttonGridElement);
-  parentItem.appendChild(buttonsElement);
+  buttonListElement.append(iconListElement);
+  buttonGridElement.append(iconGridElement);
+  buttonsElement.append(buttonListElement);
+  buttonsElement.append(buttonGridElement);
+  parentItem.append(buttonsElement);
 }
