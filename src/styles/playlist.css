@@ -46,6 +46,7 @@
   height: 48px;
   border-radius: 4px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .playlist__cover img {
@@ -61,6 +62,7 @@
   font-size: 12px;
   font-weight: 600;
   text-transform: capitalize;
+  flex-shrink: 2;
 }
 
 .playlist__track-name {
