@@ -34,7 +34,7 @@ export function eventClicks(parentItem) {
     btnList.classList.add("active");
     btnGrid.classList.remove("active");
 
-    getPlaylistWithInfo().forEach((tracksList) => {
+    getPlaylistWithInfo().filter((tracksList) => {
       renderTracks(parentItem, tracksList.songs);
     });
   }
