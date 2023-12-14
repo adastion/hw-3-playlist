@@ -7,10 +7,10 @@ export function renderPlaylist(parentItem) {
   playlistWrapperElement.classList.add("playlist");
 
   const container = containerElement();
-  playlistWrapperElement.appendChild(container);
+  playlistWrapperElement.append(container);
 
   eventClicks(container);
   sortName();
 
-  parentItem.appendChild(playlistWrapperElement);
+  parentItem.append(playlistWrapperElement);
 }

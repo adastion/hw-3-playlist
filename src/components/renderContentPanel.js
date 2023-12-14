@@ -6,7 +6,7 @@ export function renderContentPanel(parentItem) {
   contentPanelElement.classList.add("content");
 
   const container = containerElement();
-  contentPanelElement.appendChild(container);
+  contentPanelElement.append(container);
 
   const contentHeaderElement = document.createElement("div");
   contentHeaderElement.classList.add("content__header");
@@ -19,10 +19,10 @@ export function renderContentPanel(parentItem) {
   addButtonContent.classList.add("btn", "content__add-btn");
   addButtonContent.textContent = "add playlist";
 
-  container.appendChild(contentHeaderElement);
-  contentHeaderElement.appendChild(title);
-  contentHeaderElement.appendChild(addButtonContent);
+  container.append(contentHeaderElement);
+  contentHeaderElement.append(title);
+  contentHeaderElement.append(addButtonContent);
 
-  parentItem.appendChild(contentPanelElement);
+  parentItem.append(contentPanelElement);
   renderPanel(container);
 }

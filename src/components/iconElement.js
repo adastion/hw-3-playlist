@@ -5,6 +5,6 @@ export function iconElement(iconPath) {
 
   iconImg.setAttributeNS("http://www.w3.org/1999/xlink", "href", iconPath);
 
-  icon.appendChild(iconImg);
+  icon.append(iconImg);
   return icon;
 }

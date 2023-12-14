@@ -8,6 +8,10 @@
   gap: 12px;
 }
 
+.playlist__list + .playlist__list {
+  margin-top: 12px;
+}
+
 .palylist__item {
   display: flex;
   align-items: center;
