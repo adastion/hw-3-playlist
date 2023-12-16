@@ -187,8 +187,8 @@ export function getFullListTracks() {
 
   const filteredSongs = fullSongs.filter((song) => {
     return (
-      song.musician.indexOf(searchTerm) > -1 ||
-      song.songName.indexOf(searchTerm) > -1
+      song.musician.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      song.songName.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
 
@@ -197,7 +197,7 @@ export function getFullListTracks() {
 
 // setter
 export function setSearchTerm(newSearchTerm) {
-  searchTerm = newSearchTerm.toLowerCase();
+  searchTerm = newSearchTerm;
   subscriber();
 }
 
