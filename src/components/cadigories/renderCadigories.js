@@ -47,7 +47,7 @@ export function renderCategories(parentItem) {
     numberOfSong.classList.add("categories__number-of-songs");
 
     const numberTracks = document.createElement("span");
-    numberTracks.textContent = "4 tracks,";
+    numberTracks.textContent = `${tracksList.songs.length}  tracks, `;
 
     const totalTime = document.createElement("span");
     totalTime.textContent = "12m 13s";

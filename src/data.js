@@ -147,6 +147,7 @@ export function getPathStatic() {
   return pathStatic;
 }
 
+let searchTerm = "";
 let subscriber = null;
 let sortDirection = {
   direction: null,
@@ -176,4 +177,30 @@ export function setSortSongs(direction) {
 
 export function getSortDirection() {
   return sortDirection;
+}
+
+// getter
+export function getFullListTracks() {
+  const fullSongs = getPlaylist().reduce((tracks, array) => {
+    return tracks.concat(array);
+  }, []);
+
+  const filteredSongs = fullSongs.filter((song) => {
+    return (
+      song.musician.indexOf(searchTerm) > -1 ||
+      song.songName.indexOf(searchTerm) > -1
+    );
+  });
+
+  return filteredSongs;
+}
+
+// setter
+export function setSearchTerm(newSearchTerm) {
+  searchTerm = newSearchTerm.toLowerCase();
+  subscriber();
+}
+
+export function getSearchTerm() {
+  return searchTerm;
 }
