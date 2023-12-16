@@ -14,10 +14,22 @@ export function renderCategories(parentItem) {
     const coverElement = document.createElement("div");
     coverElement.classList.add("categories__cover");
 
+    let theBestSong;
+    if (tracksList.songs.find((song) => song.theBestSong === true)) {
+      theBestSong = {
+        cover: tracksList.songs.find((song) => song.theBestSong === true).cover,
+        musician: tracksList.songs.find((song) => song.theBestSong === true)
+          .musician,
+        songName: tracksList.songs.find((song) => song.theBestSong === true)
+          .songName,
+      };
+    } else {
+      null;
+    }
+
     const imageElement = document.createElement("img");
 
-    imageElement.src =
-      "https://sun6-21.userapi.com/s/v1/ig1/YW734k6hzX16XimQbdIpPtp2wB_27HlSf9ZrxHP3yIuNqQqMT2QHqa0J8Pqg9e_YfEXQ6dff.jpg?size=721x721&quality=96&crop=238,39,721,721&ava=1";
+    imageElement.src = theBestSong.cover;
     imageElement.alt = "cover-category";
 
     const infoElement = document.createElement("section");
@@ -35,7 +47,7 @@ export function renderCategories(parentItem) {
     numberOfSong.classList.add("categories__number-of-songs");
 
     const numberTracks = document.createElement("span");
-    numberTracks.textContent = "4 tracks,";
+    numberTracks.textContent = `${tracksList.songs.length}  tracks, `;
 
     const totalTime = document.createElement("span");
     totalTime.textContent = "12m 13s";
@@ -44,7 +56,7 @@ export function renderCategories(parentItem) {
     topSongs.classList.add("categories__top-songs");
 
     const nameTopTrack = document.createElement("p");
-    nameTopTrack.textContent = "Eminem, 50cent, Lloyd Banks ";
+    nameTopTrack.textContent = `${theBestSong.musician} - ${theBestSong.songName} `;
 
     const staticTextElement = document.createElement("span");
     staticTextElement.textContent = "and others";

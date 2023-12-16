@@ -11,6 +11,7 @@
   grid-template-columns: 1fr 2fr;
   gap: 30px 24px;
   align-items: center;
+  align-content: start;
 }
 
 .categories__block ul {
@@ -19,14 +20,17 @@
 
 .categories__cover {
   max-width: 170px;
-  border-radius: 4px;
   overflow: hidden;
-  aspect-ratio: 1/1;
-  object-fit: cover;
   position: relative;
   z-index: 1;
   width: 100%;
   align-self: center;
+}
+
+.categories__cover img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .categories__cover:hover .categories__cover::before {
