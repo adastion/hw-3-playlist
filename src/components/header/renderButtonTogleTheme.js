@@ -2,7 +2,9 @@ import { getPathStatic } from "../../data.js";
 import { iconElement } from "./../iconElement.js";
 
 export function renderButtonTogleTheme(parentItem) {
-  if (!localStorage.getItem("currentTheme")) {
+  let currentTheme = localStorage.getItem("currentTheme");
+
+  if (!currentTheme) {
     localStorage.setItem("currentTheme", "dark");
   }
 
@@ -14,17 +16,25 @@ export function renderButtonTogleTheme(parentItem) {
   const currentPath = document.querySelector(".logo");
 
   const kitColors = document.querySelector("body");
-  if (!kitColors.getAttribute("data-theme")) {
+
+  if (currentTheme === "dark") {
+    kitColors.setAttribute("data-theme", currentTheme);
+    currentPath.src = getPathStatic().pathLogo.forDark;
+  }
+
+  if (localStorage.getItem("currentTheme") === "light") {
     kitColors.setAttribute("data-theme", localStorage.getItem("currentTheme"));
+    currentPath.src = getPathStatic().pathLogo.forLight;
+    buttonToggleTheme.classList.add("light-theme");
   }
 
   buttonToggleTheme.addEventListener("click", () => {
-    if (kitColors.getAttribute("data-theme") === "dark") {
+    if (localStorage.getItem("currentTheme") === "dark") {
       localStorage.setItem("currentTheme", "light");
       kitColors.setAttribute("data-theme", "light");
       buttonToggleTheme.classList.add("light-theme");
       currentPath.src = getPathStatic().pathLogo.forLight;
-    } else {
+    } else if (localStorage.getItem("currentTheme") === "light") {
       localStorage.setItem("currentTheme", "dark");
       kitColors.setAttribute("data-theme", "dark");
       buttonToggleTheme.classList.remove("light-theme");

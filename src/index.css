@@ -85,6 +85,21 @@ body[data-theme="light"] {
   --opposite_accent_color: #f6bd41;
 }
 
+*::-webkit-scrollbar {
+  width: 14px;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: red;
+  background: var(--primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: var(--secondary);
+}
+
 body {
   font-family: "SF UI Display", sans-serif;
   font-size: 16px;

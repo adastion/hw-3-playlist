@@ -58,6 +58,15 @@
   flex-grow: 1;
 }
 
+.playlist__row-wrapper {
+  display: flex;
+  gap: 0 5px;
+}
+
+.playlist__isHot {
+  max-width: 12px;
+}
+
 .palaylist__track-title {
   font-size: 12px;
   font-weight: 600;

@@ -38,11 +38,9 @@
 .btn.btn--toggle-theme {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   position: relative;
   padding: 0;
   overflow: hidden;
-  transform: rotate(0deg);
   transition: 0.3s ease-in-out;
 }
 
