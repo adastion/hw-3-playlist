@@ -1,5 +1,9 @@
 const pathStatic = {
-  pathLogo: "src/assets/images/logo.svg",
+  pathLogo: {
+    forDark: "src/assets/images/logo-dark.svg",
+    forLight: "src/assets/images/logo-light.svg",
+  },
+  pathIsHot: "src/assets/images/hot-song.png",
 };
 
 const playlists = [

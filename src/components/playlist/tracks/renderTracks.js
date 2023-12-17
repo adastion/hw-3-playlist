@@ -9,6 +9,7 @@ export function renderTracks(parentItem, tracksList) {
     const cover = song.cover;
     const musicianName = song.musician;
     const nameTrack = song.songName;
+    const isHotSong = song.isHotSong;
 
     const treckElement = document.createElement("li");
     treckElement.classList.add("palylist__item");
@@ -26,6 +27,7 @@ export function renderTracks(parentItem, tracksList) {
 
     const titleElement = document.createElement("h2");
     titleElement.classList.add("palaylist__track-title");
+
     const musician = document.createElement("span");
     musician.classList.add("playlist__actor");
     musician.textContent = musicianName + " - ";
@@ -35,16 +37,15 @@ export function renderTracks(parentItem, tracksList) {
     songName.classList.add("playlist__track-name");
     songName.textContent = nameTrack;
     titleElement.append(songName);
-
     audioWrapper.append(titleElement);
-
+    
     const songElement = document.createElement("audio");
     songElement.controls = true;
     songElement.src = fileUrls;
+
     audioWrapper.append(songElement);
     treckElement.append(audioWrapper);
     listTracksElement.append(treckElement);
-
     parentItem.append(listTracksElement);
   });
 }
