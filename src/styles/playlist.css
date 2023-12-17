@@ -72,7 +72,7 @@
 .playlist__track audio {
   height: 24px;
   margin-top: 10px;
-  filter: invert(1);
+  filter: var(--audioControlsColor);
 }
 
 .playlist__track audio::-webkit-media-controls-enclosure {

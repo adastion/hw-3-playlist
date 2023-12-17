@@ -1,16 +1,16 @@
-@import url('styles/wrapper.css'); 
-@import url('styles/buttons.css'); 
-@import url('styles/title.css'); 
-@import url('styles/header.css'); 
-@import url('styles/logo.css'); 
-@import url('styles/container.css'); 
-@import url('styles/content.css'); 
-@import url('styles/panel.css'); 
-@import url('styles/form.css'); 
-@import url('styles/sort.css'); 
-@import url('styles/playlist.css'); 
-@import url('styles/categories.css'); 
-@import url('styles/player.css'); 
+@import url("styles/wrapper.css");
+@import url("styles/buttons.css");
+@import url("styles/title.css");
+@import url("styles/header.css");
+@import url("styles/logo.css");
+@import url("styles/container.css");
+@import url("styles/content.css");
+@import url("styles/panel.css");
+@import url("styles/form.css");
+@import url("styles/sort.css");
+@import url("styles/playlist.css");
+@import url("styles/categories.css");
+@import url("styles/player.css");
 
 @font-face {
   font-family: "Roboto";
@@ -65,12 +65,24 @@ img {
   max-width: 100%;
 }
 
-:root {
+body[data-theme="dark"] {
   --primary: #121212;
   --secondary: #fff;
   --accent: #f6bd41;
   --primary_bg: rgba(29, 29, 29, 1);
   --secondary_bg: rgba(150, 150, 150, 1);
+  --audioControlsColor: invert(1);
+  --opposite_accent_color: #9c3232;
+}
+
+body[data-theme="light"] {
+  --primary: #d9d9d9;
+  --secondary: #000;
+  --accent: #9c3232;
+  --primary_bg: rgb(186 186 186);
+  --secondary_bg: rgb(79 109 118);
+  --audioControlsColor: invert(0.1);
+  --opposite_accent_color: #f6bd41;
 }
 
 body {
