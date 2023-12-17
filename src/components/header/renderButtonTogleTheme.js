@@ -1,3 +1,4 @@
+import { getPathStatic } from "../../data.js";
 import { iconElement } from "./../iconElement.js";
 
 export function renderButtonTogleTheme(parentItem) {
@@ -10,6 +11,8 @@ export function renderButtonTogleTheme(parentItem) {
 
   const iconTheme = iconElement("src/assets/images/sprite-icon.svg#icon-moon");
 
+  const currentPath = document.querySelector(".logo");
+
   const kitColors = document.querySelector("body");
   if (!kitColors.getAttribute("data-theme")) {
     kitColors.setAttribute("data-theme", localStorage.getItem("currentTheme"));
@@ -20,10 +23,12 @@ export function renderButtonTogleTheme(parentItem) {
       localStorage.setItem("currentTheme", "light");
       kitColors.setAttribute("data-theme", "light");
       buttonToggleTheme.classList.add("light-theme");
+      currentPath.src = getPathStatic().pathLogo.forLight;
     } else {
       localStorage.setItem("currentTheme", "dark");
       kitColors.setAttribute("data-theme", "dark");
       buttonToggleTheme.classList.remove("light-theme");
+      currentPath.src = getPathStatic().pathLogo.forDark;
     }
   });
 

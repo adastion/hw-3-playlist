@@ -13,20 +13,14 @@ export function renderHeader(parentItem) {
   const logoElement = document.createElement("a");
   logoElement.href = "/";
   const imageLogo = document.createElement("img");
-
-  const kitColors = document.querySelector("body")
-
-  if (kitColors.getAttribute("data-theme") === "dark") {
-    imageLogo.src = logoData.pathLogo.forDark;
-  } else {
-    imageLogo.src = logoData.pathLogo.forLight;
-  }
+  imageLogo.classList.add("logo");
+  imageLogo.src = logoData.pathLogo.forDark;
 
   logoElement.append(imageLogo);
   containerElement.append(logoElement);
 
-  renderButtonTogleTheme(containerElement);
-
   headerElement.append(containerElement);
   parentItem.append(headerElement);
+
+  renderButtonTogleTheme(containerElement);
 }
