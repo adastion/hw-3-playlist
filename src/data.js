@@ -30,7 +30,7 @@ const playlists = [
         musician: "Vanilla Ice",
         songName: "Ice Ice Baby",
         year: 1990,
-        isHot: false,
+        isHot: true,
         theBestSong: false,
         fileUrl:
           "https://s2.deliciouspeaches.com/get/cuts/5a/2e/5a2eb044cf9eb6aa3ff2649727976ac0/63186026/Vanila_Ice_-_ice_ice_baby_b128f0d301.mp3",
@@ -61,7 +61,7 @@ const playlists = [
         musician: "Brand Nubian",
         songName: "Brand Nubian",
         year: 1990,
-        isHot: false,
+        isHot: true,
         theBestSong: true,
         fileUrl:
           "https://s2.deliciouspeaches.com/get/cuts/39/83/39839f35673ec3de32d8906eb291a71a/48269758/Brand_Nubian_-_Slow_Down_b128f0d303.mp3",
@@ -96,7 +96,7 @@ const playlists = [
         musician: "DMX",
         songName: "X Gon' Give It To Ya",
         year: 2003,
-        isHot: false,
+        isHot: true,
         theBestSong: true,
         fileUrl:
           "https://ds.cdn13.deliciouspeaches.com/get/cuts/50/db/50db78476930c2bc60c0651c0a01e140/48021216/DMX_-_X_Gon_Give_It_To_Ya_b128f0d217.mp3",

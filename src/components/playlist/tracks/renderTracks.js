@@ -1,3 +1,5 @@
+import { getPathStatic } from "../../../data.js";
+
 export function renderTracks(parentItem, tracksList) {
   const playlistWrapperElement = document.createElement("section");
   playlistWrapperElement.classList.add("panel");
@@ -9,7 +11,7 @@ export function renderTracks(parentItem, tracksList) {
     const cover = song.cover;
     const musicianName = song.musician;
     const nameTrack = song.songName;
-    const isHotSong = song.isHotSong;
+    const isHotSong = song.isHot;
 
     const treckElement = document.createElement("li");
     treckElement.classList.add("palylist__item");
@@ -25,6 +27,17 @@ export function renderTracks(parentItem, tracksList) {
     const audioWrapper = document.createElement("section");
     audioWrapper.classList.add("playlist__track");
 
+    const rowWrapper = document.createElement("div");
+    rowWrapper.classList.add("playlist__row-wrapper");
+
+    const imageHotSong = document.createElement("img");
+    imageHotSong.classList.add("playlist__isHot");
+    imageHotSong.src = getPathStatic().pathIsHot;
+
+    if (isHotSong === true) {
+      rowWrapper.append(imageHotSong);
+    }
+
     const titleElement = document.createElement("h2");
     titleElement.classList.add("palaylist__track-title");
 
@@ -36,13 +49,14 @@ export function renderTracks(parentItem, tracksList) {
     const songName = document.createElement("span");
     songName.classList.add("playlist__track-name");
     songName.textContent = nameTrack;
-    titleElement.append(songName);
-    audioWrapper.append(titleElement);
     
     const songElement = document.createElement("audio");
     songElement.controls = true;
     songElement.src = fileUrls;
-
+    
+    titleElement.append(songName);
+    rowWrapper.append(titleElement);
+    audioWrapper.append(rowWrapper);
     audioWrapper.append(songElement);
     treckElement.append(audioWrapper);
     listTracksElement.append(treckElement);
