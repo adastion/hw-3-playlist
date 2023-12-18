@@ -1,6 +1,6 @@
 import { getFullListTracks } from "../../../data.js";
 import { renderTracks } from "../tracks/renderTracks.js";
-import { renderCategories } from "./../../cadigories/renderCadigories.js";
+import { renderCategories } from "../../categories/renderCategories.js";
 
 export function eventClicks(parentItem) {
   const btnList = document.getElementById("btnList");

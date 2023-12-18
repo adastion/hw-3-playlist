@@ -1,6 +1,5 @@
 import { getPlaylistWithInfo } from "../../data.js";
-import { getFullDuration } from "../playlist/tracks/getFullDuration.js";
-import { renderTracks } from "./../playlist/tracks/renderTracks.js";
+import { renderTracks } from "../playlist/tracks/renderTracks.js";
 
 export function renderCategories(parentItem) {
   const categoriesElement = document.createElement("ul");
@@ -77,8 +76,5 @@ export function renderCategories(parentItem) {
     parentItem.appendChild(categoriesElement);
 
     renderTracks(categoryElement, tracksList.songs);
-    const totalDuration = getFullDuration()
-
-    console.log(totalDuration);
   });
 }
