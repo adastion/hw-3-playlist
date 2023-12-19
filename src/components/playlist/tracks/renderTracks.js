@@ -6,15 +6,15 @@ export function renderTracks(parentItem, tracksList) {
   const listTracksElement = document.createElement("ul");
   listTracksElement.classList.add("playlist__list");
 
-  tracksList.map((song) => {
-    const fileUrls = song.fileUrl;
+  tracksList.forEach((song) => {
+    const fileUrl = song.fileUrl;
     const cover = song.cover;
     const musicianName = song.musician;
     const nameTrack = song.songName;
     const isHotSong = song.isHot;
 
-    const treckElement = document.createElement("li");
-    treckElement.classList.add("palylist__item");
+    const trackElement = document.createElement("li");
+    trackElement.classList.add("palylist__item");
 
     const coverElement = document.createElement("div");
     coverElement.classList.add("playlist__cover");
@@ -22,7 +22,7 @@ export function renderTracks(parentItem, tracksList) {
     const imageCoverElement = document.createElement("img");
     imageCoverElement.src = cover;
     coverElement.append(imageCoverElement);
-    treckElement.append(coverElement);
+    trackElement.append(coverElement);
 
     const audioWrapper = document.createElement("section");
     audioWrapper.classList.add("playlist__track");
@@ -34,12 +34,12 @@ export function renderTracks(parentItem, tracksList) {
     imageHotSong.classList.add("playlist__isHot");
     imageHotSong.src = getPathStatic().pathIsHot;
 
-    if (isHotSong === true) {
+    if (isHotSong) {
       rowWrapper.append(imageHotSong);
     }
 
     const titleElement = document.createElement("h2");
-    titleElement.classList.add("palaylist__track-title");
+    titleElement.classList.add("playlist__track-title");
 
     const musician = document.createElement("span");
     musician.classList.add("playlist__actor");
@@ -49,17 +49,17 @@ export function renderTracks(parentItem, tracksList) {
     const songName = document.createElement("span");
     songName.classList.add("playlist__track-name");
     songName.textContent = nameTrack;
-    
-    const songElement = document.createElement("audio");
+
+    const songElement = new Audio();
     songElement.controls = true;
-    songElement.src = fileUrls;
-    
+    songElement.src = fileUrl;
+
     titleElement.append(songName);
     rowWrapper.append(titleElement);
     audioWrapper.append(rowWrapper);
     audioWrapper.append(songElement);
-    treckElement.append(audioWrapper);
-    listTracksElement.append(treckElement);
+    trackElement.append(audioWrapper);
+    listTracksElement.append(trackElement);
     parentItem.append(listTracksElement);
   });
 }

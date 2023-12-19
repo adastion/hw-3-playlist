@@ -74,6 +74,116 @@ const playlists = [
     ],
   },
   {
+    title: "Rep Hits",
+    songs: [
+      {
+        id: 5,
+        musician: "50 Cent",
+        songName: "In da Club",
+        year: 2003,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://ds.cdn1.deliciouspeaches.com/get/cuts/1d/c9/1dc9bed60952bc86dc754ed6bca8f67d/47965582/50_Cent_-_In_Da_Club_b128f0d193.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/4d2/e7b/1199.jpg",
+        info: {
+          duration: "3:13",
+          totalTracksCount: 16,
+        },
+      },
+      {
+        id: 6,
+        musician: "DMX",
+        songName: "X Gon' Give It To Ya",
+        year: 2003,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://ds.cdn13.deliciouspeaches.com/get/cuts/50/db/50db78476930c2bc60c0651c0a01e140/48021216/DMX_-_X_Gon_Give_It_To_Ya_b128f0d217.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/955/cb5/2054.jpg",
+        info: {
+          duration: "3:38",
+          totalTracksCount: 15,
+        },
+      },
+      {
+        id: 7,
+        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
+        songName: "You Don't Know",
+        year: 2006,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
+        info: {
+          duration: "4:17",
+          totalTracksCount: 18,
+        },
+      },
+      {
+        id: 7,
+        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
+        songName: "You Don't Know",
+        year: 2006,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
+        info: {
+          duration: "4:17",
+          totalTracksCount: 18,
+        },
+      },
+      {
+        id: 7,
+        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
+        songName: "You Don't Know",
+        year: 2006,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
+        info: {
+          duration: "4:17",
+          totalTracksCount: 18,
+        },
+      },
+      {
+        id: 7,
+        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
+        songName: "You Don't Know",
+        year: 2006,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
+        info: {
+          duration: "4:17",
+          totalTracksCount: 18,
+        },
+      },
+      {
+        id: 8,
+        musician: "Eminem",
+        songName: "Rap God",
+        year: 2013,
+        isHot: true,
+        theBestSong: true,
+        fileUrl:
+          "https://ds.cdn4.deliciouspeaches.com/get/cuts/53/45/5345f1c087ec56d686a21e7013474e74/47964975/Eminem_-_Rap_God_b128f0d364.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/0ac/6bb/9957.jpg",
+        info: {
+          duration: "6:03",
+          totalTracksCount: 20,
+        },
+      },
+    ],
+  },
+  {
     title: "Pop Hits",
     songs: [
       {
@@ -162,27 +272,6 @@ export function subscribe(listener) {
   subscriber = listener;
 }
 
-export function setSortSongs(direction) {
-  sortDirection.direction = direction;
-  sortDirection.selector = direction;
-
-  getPlaylist().forEach((playlist) => {
-    playlist.sort((a, b) => {
-      if (direction === "ascending") {
-        return a.songName.localeCompare(b.songName);
-      } else {
-        return b.songName.localeCompare(a.songName);
-      }
-    });
-  });
-
-  subscriber();
-}
-
-export function getSortDirection() {
-  return sortDirection;
-}
-
 // getter
 export function getFullListTracks() {
   const fullSongs = getPlaylist().reduce((tracks, array) => {
@@ -207,4 +296,25 @@ export function setSearchTerm(newSearchTerm) {
 
 export function getSearchTerm() {
   return searchTerm;
+}
+
+export function setSortSongs(direction) {
+  sortDirection.direction = direction;
+  sortDirection.selector = direction;
+
+  getPlaylist().forEach((playlist) => {
+    playlist.sort((a, b) => {
+      if (direction === "ascending") {
+        return a.songName.localeCompare(b.songName);
+      } else {
+        return b.songName.localeCompare(a.songName);
+      }
+    });
+  });
+
+  subscriber();
+}
+
+export function getSortDirection() {
+  return sortDirection;
 }
