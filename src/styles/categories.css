@@ -14,7 +14,9 @@
   align-content: start;
 }
 
-.categories__block ul {
+.categories__tracks-wrapper {
+  max-height: 410px;
+  overflow-y: auto;
   grid-column: 1/-1;
 }
 

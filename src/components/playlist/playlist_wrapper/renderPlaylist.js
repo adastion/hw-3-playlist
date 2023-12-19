@@ -1,7 +1,7 @@
 import { containerElement } from "../../containerElement.js";
 import { searchFilter } from "../../search/searchSongs.js";
 import { sortName } from "../../sort/sortName.js";
-import { eventClicks } from "./eventClicks.js";
+import { renderListSongs } from "./renderListSongs.js";
 
 export function renderPlaylist(parentItem) {
   const playlistWrapperElement = document.createElement("section");
@@ -10,7 +10,7 @@ export function renderPlaylist(parentItem) {
   const container = containerElement();
   playlistWrapperElement.append(container);
 
-  eventClicks(container);
+  renderListSongs(container);
   searchFilter();
   sortName();
 

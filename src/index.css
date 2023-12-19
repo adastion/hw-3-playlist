@@ -91,13 +91,12 @@ body[data-theme="light"] {
 }
 
 *::-webkit-scrollbar-track {
-  background: red;
   background: var(--primary);
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background: var(--secondary);
+  border-radius: 3px;
+  background: var(--accent);
 }
 
 body {

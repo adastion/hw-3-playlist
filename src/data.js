@@ -108,59 +108,14 @@ const playlists = [
       },
       {
         id: 7,
-        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
-        songName: "You Don't Know",
+        musician: "U Ain't Me",
+        songName: "Xzibit, Chamillionaire, Ras Kass, Strong Arm Steady",
         year: 2006,
         isHot: false,
         theBestSong: false,
         fileUrl:
-          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
-        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
-        info: {
-          duration: "4:17",
-          totalTracksCount: 18,
-        },
-      },
-      {
-        id: 7,
-        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
-        songName: "You Don't Know",
-        year: 2006,
-        isHot: false,
-        theBestSong: false,
-        fileUrl:
-          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
-        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
-        info: {
-          duration: "4:17",
-          totalTracksCount: 18,
-        },
-      },
-      {
-        id: 7,
-        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
-        songName: "You Don't Know",
-        year: 2006,
-        isHot: false,
-        theBestSong: false,
-        fileUrl:
-          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
-        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
-        info: {
-          duration: "4:17",
-          totalTracksCount: 18,
-        },
-      },
-      {
-        id: 7,
-        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
-        songName: "You Don't Know",
-        year: 2006,
-        isHot: false,
-        theBestSong: false,
-        fileUrl:
-          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
-        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
+          "https://ds.cdn4.deliciouspeaches.com/get/cuts/9d/80/9d8053a6f8c25afdebef1a0e510dc950/48400751/Xzibit_Chamillionaire_Ras_Kass_Strong_Arm_Steady_-_U_Aint_Me_b128f0d283.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/a6e/182/237141.jpg",
         info: {
           duration: "4:17",
           totalTracksCount: 18,
@@ -168,6 +123,52 @@ const playlists = [
       },
       {
         id: 8,
+        musician: "Xzibit",
+        songName: "Paparazzi",
+        year: 2006,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://s2.deliciouspeaches.com/get/cuts/38/23/382309782c92053d9d5ff97798746a4c/49909421/Xzibit_-_Paparazzi_b128f0d236.mp3          ",
+        cover: "https://static.hitmcdn.com/covers/a/3de/502/17953.jpg",
+        info: {
+          duration: "4:17",
+          totalTracksCount: 18,
+        },
+      },
+      {
+        id: 9,
+        musician: "Real Muthaphuckkin G's",
+        songName: "Eazy-E",
+        year: 2006,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://s2.deliciouspeaches.com/get/cuts/b8/03/b803d6d30bd266877cbee9b3160a09a7/53651275/Eazy-E_-_Real_Muthaphuckkin_Gs_b128f0d333.mp3",
+        cover:
+          "https://static.hitmcdn.com/covers/a/36f/7b9/59619.jpg          ",
+        info: {
+          duration: "4:17",
+          totalTracksCount: 18,
+        },
+      },
+      {
+        id: 10,
+        musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
+        songName: "You Don't Know",
+        year: 2006,
+        isHot: false,
+        theBestSong: false,
+        fileUrl:
+          "https://ds.cdn9.deliciouspeaches.com/get/cuts/29/2a/292a03ad67db8204aa071c8e3c9baf91/48055043/Eminem_50_Cent_Lloyd_Banks_Cahis_-_You_Dont_Know_b128f0d257.mp3",
+        cover: "https://static.hitmcdn.com/covers/a/a7f/43c/33098.jpg",
+        info: {
+          duration: "4:17",
+          totalTracksCount: 18,
+        },
+      },
+      {
+        id: 11,
         musician: "Eminem",
         songName: "Rap God",
         year: 2013,
@@ -187,7 +188,7 @@ const playlists = [
     title: "Pop Hits",
     songs: [
       {
-        id: 5,
+        id: 12,
         musician: "50 Cent",
         songName: "In da Club",
         year: 2003,
@@ -202,7 +203,7 @@ const playlists = [
         },
       },
       {
-        id: 6,
+        id: 13,
         musician: "DMX",
         songName: "X Gon' Give It To Ya",
         year: 2003,
@@ -217,7 +218,7 @@ const playlists = [
         },
       },
       {
-        id: 7,
+        id: 14,
         musician: "Eminem feat 50 Cent, Cashis, Lloyd Banks",
         songName: "You Don't Know",
         year: 2006,
@@ -232,7 +233,7 @@ const playlists = [
         },
       },
       {
-        id: 8,
+        id: 15,
         musician: "Eminem",
         songName: "Rap God",
         year: 2013,

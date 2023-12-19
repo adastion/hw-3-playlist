@@ -62,4 +62,6 @@ export function renderTracks(parentItem, tracksList) {
     listTracksElement.append(trackElement);
     parentItem.append(listTracksElement);
   });
+
 }
+
