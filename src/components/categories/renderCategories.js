@@ -23,8 +23,6 @@ export function renderCategories(parentItem) {
         songName: tracksList.songs.find((song) => song.theBestSong === true)
           .songName,
       };
-    } else {
-      null;
     }
 
     const imageElement = document.createElement("img");
@@ -61,6 +59,9 @@ export function renderCategories(parentItem) {
     const staticTextElement = document.createElement("span");
     staticTextElement.textContent = "and others";
 
+    const traksWrapperElement = document.createElement("div");
+    traksWrapperElement.classList.add("categories__tracks-wrapper");
+
     coverElement.appendChild(imageElement);
     categoryElement.appendChild(coverElement);
     infoElement.appendChild(titleElement);
@@ -72,9 +73,10 @@ export function renderCategories(parentItem) {
     topSongs.appendChild(nameTopTrack);
     infoElement.appendChild(topSongs);
     categoryElement.appendChild(infoElement);
+    categoryElement.appendChild(traksWrapperElement);
     categoriesElement.appendChild(categoryElement);
     parentItem.appendChild(categoriesElement);
 
-    renderTracks(categoryElement, tracksList.songs);
+    renderTracks(traksWrapperElement, tracksList.songs);
   });
 }

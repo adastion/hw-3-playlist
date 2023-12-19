@@ -8,11 +8,6 @@
   gap: 12px;
 }
 
-.playlist__list.playlist__list--category {
-  max-height: 410px;
-  overflow-y: auto;
-}
-
 .playlist__list + .playlist__list {
   margin-top: 12px;
 }
