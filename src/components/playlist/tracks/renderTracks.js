@@ -1,4 +1,4 @@
-import { getPathStatic } from "../../../data.js";
+import { createImageHotSong } from "./createImageSong.js";
 
 export function renderTracks(parentItem, tracksList) {
   const playlistWrapperElement = document.createElement("section");
@@ -30,13 +30,7 @@ export function renderTracks(parentItem, tracksList) {
     const rowWrapper = document.createElement("div");
     rowWrapper.classList.add("playlist__row-wrapper");
 
-    const imageHotSong = document.createElement("img");
-    imageHotSong.classList.add("playlist__isHot");
-    imageHotSong.src = getPathStatic().pathIsHot;
-
-    if (isHotSong) {
-      rowWrapper.append(imageHotSong);
-    }
+    createImageHotSong(rowWrapper, isHotSong);
 
     const titleElement = document.createElement("h2");
     titleElement.classList.add("playlist__track-title");
@@ -62,6 +56,4 @@ export function renderTracks(parentItem, tracksList) {
     listTracksElement.append(trackElement);
     parentItem.append(listTracksElement);
   });
-
 }
-
