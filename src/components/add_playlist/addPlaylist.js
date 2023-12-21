@@ -1,37 +1,55 @@
-import { rootElement } from "./../../index.js";
-
-export function addPlaylist() {
+export function addPlaylist(parentItem) {
   const addButton = document.querySelector(".content__add-btn");
 
   const modalElement = document.createElement("section");
-  modalElement.style.background = "#d9d9d9";
-  modalElement.textContent = "POP UP!!!";
+  modalElement.classList.add("modal");
 
-  const formElement = document.createElement("form");
-  const downloadButton = document.createElement("button");
-  const buttonAddSong = document.createElement("button");
-  const buttonCloseModal = document.createElement("button");
+  const contentElement = document.createElement("div");
+  contentElement.classList.add("modal__content");
 
-  buttonCloseModal.textContent = "Close modal";
-  buttonCloseModal.style.position = "absolute";
-  buttonCloseModal.style.top = "10px";
-  buttonCloseModal.style.right = "10px";
+  const headerElement = document.createElement("div");
+  headerElement.classList.add("modal__header");
+
+  const buttonCloseElement = document.createElement("button");
+  buttonCloseElement.classList.add("btn", "modal__btn-close");
+  buttonCloseElement.textContent = "X";
+
+  const titleElement = document.createElement("h2");
+  titleElement.classList.add("modal__title");
+  titleElement.textContent = "create your own playlist!";
+
+  const buttonLoadElement = document.createElement("input");
+  buttonLoadElement.classList.add("btn", "modal__add-file");
+  buttonLoadElement.type = "file";
+
+  const buttonDownload = document.createElement("button");
+  buttonDownload.classList.add("btn");
+  buttonDownload.textContent = "download";
+
+  headerElement.append(titleElement);
+  contentElement.append(buttonCloseElement);
+  contentElement.append(headerElement);
+  contentElement.append(buttonLoadElement);
+  contentElement.append(buttonDownload);
+  modalElement.append(contentElement);
+  parentItem.append(modalElement);
+
+  modalElement.addEventListener("click", () => {
+    modalElement.classList.remove("active");
+    document.querySelector("body").classList.remove("hidden");
+  });
+
+  contentElement.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
 
   addButton.addEventListener("click", () => {
-    modalElement.style.width = "200px";
-    modalElement.style.height = "200px";
-    modalElement.style.position = "absolute";
-    modalElement.style.top = "50%";
-    modalElement.style.left = "50%";
-    modalElement.style.transform = "translate(-50%, -50%)";
-    modalElement.style.display = "block";
+    modalElement.classList.add("active");
+    document.querySelector("body").classList.add("hidden");
   });
 
-  buttonCloseModal.addEventListener("click", () => {
-    modalElement.style.display = "none";
+  buttonCloseElement.addEventListener("click", () => {
+    modalElement.classList.remove("active");
+    document.querySelector("body").classList.remove("hidden");
   });
-
-  modalElement.append(buttonCloseModal);
-  rootElement.append(modalElement);
-  // return modalElement
 }

@@ -14,7 +14,7 @@ export function renderApp() {
   renderContentPanel(rootElement);
   renderPlaylist(rootElement);
   playOnlyOne();
-  addPlaylist()
+  addPlaylist(rootElement)
 }
 
 renderApp();
