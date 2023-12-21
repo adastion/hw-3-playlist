@@ -11,6 +11,7 @@
 @import url("styles/playlist.css");
 @import url("styles/categories.css");
 @import url("styles/player.css");
+@import url("styles/modal.css");
 
 @font-face {
   font-family: "Roboto";
@@ -102,4 +103,8 @@ body[data-theme="light"] {
 body {
   font-family: "SF UI Display", sans-serif;
   font-size: 16px;
+}
+
+body.hidden {
+  overflow: hidden;
 }
