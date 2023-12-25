@@ -1,4 +1,8 @@
-import { loadInfoSelectedFiles } from "./loadInfoSelectedFiles.js";
+import { createNewPlaylist } from "../../data.js";
+import {
+  loadInfoSelectedFiles,
+  returnInfoSongs,
+} from "./loadInfoSelectedFiles.js";
 
 export function addPlaylist(parentItem) {
   const addButton = document.querySelector(".content__add-btn");
@@ -32,7 +36,7 @@ export function addPlaylist(parentItem) {
   inputFileElement.classList.add("modal__add-file");
   inputFileElement.id = "addSong";
   inputFileElement.type = "file";
-  inputFileElement.accept = ".mp3";
+  inputFileElement.accept = "audio/.mp3";
   inputFileElement.multiple = true;
 
   const buttonDownload = document.createElement("button");
@@ -44,7 +48,11 @@ export function addPlaylist(parentItem) {
   contentElement.append(headerElement);
   contentElement.append(buttonLoad);
   contentElement.append(inputFileElement);
-  contentElement.append(loadInfoSelectedFiles(previewFilesElement, inputFileElement));
+
+  contentElement.append(
+    loadInfoSelectedFiles(previewFilesElement, inputFileElement)
+  );
+
   contentElement.append(buttonDownload);
   modalElement.append(contentElement);
   parentItem.append(modalElement);
@@ -64,6 +72,13 @@ export function addPlaylist(parentItem) {
   });
 
   buttonCloseElement.addEventListener("click", () => {
+    modalElement.classList.remove("active");
+    document.querySelector("body").classList.remove("hidden");
+  });
+
+  buttonDownload.addEventListener("click", () => {
+
+    createNewPlaylist("red", returnInfoSongs());
     modalElement.classList.remove("active");
     document.querySelector("body").classList.remove("hidden");
   });

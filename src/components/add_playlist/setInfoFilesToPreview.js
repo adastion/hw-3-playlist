@@ -9,4 +9,6 @@ export function setInfoFilesToPreview(parentItem, nameFile, sizeFile) {
 
   previewElement.append(info);
   parentItem.append(previewElement);
+
+  return previewElement;
 }
