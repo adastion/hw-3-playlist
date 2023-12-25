@@ -268,7 +268,6 @@ let sortDirection = {
   direction: null,
   selector: "descending",
 };
-let loadedFileUrl = null;
 
 export function subscribe(listener) {
   subscriber = listener;
@@ -344,10 +343,5 @@ export function createNewPlaylist(namePlaylist, urlSongs) {
     songs: songs,
   });
 
-  subscriber();
-}
-
-export function setFileUrl(fileUrl) {
-  loadedFileUrl = fileUrl;
   subscriber();
 }
