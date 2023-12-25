@@ -21,6 +21,7 @@ export function renderTracks(parentItem, tracksList) {
 
     const imageCoverElement = document.createElement("img");
     imageCoverElement.src = cover;
+    imageCoverElement.alt = "image-cover";
     coverElement.append(imageCoverElement);
     trackElement.append(coverElement);
 
