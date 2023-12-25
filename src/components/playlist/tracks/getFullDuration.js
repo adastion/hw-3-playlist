@@ -5,7 +5,7 @@ export function getFullDuration() {
   const allTracks = document.querySelectorAll("audio");
 
   allTracks.forEach((audioTrack) => {
-    audioTrack.addEventListener("loadedmetadata", () => {
+    audioTrack.addEventListener("load", () => {
       totalDuration += audio.duration;
       
     });

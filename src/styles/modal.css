@@ -51,8 +51,21 @@
 .modal__description {
 }
 .modal__add-file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
+
 .modal__list-songs {
+  display: grid;
+  gap: 25px;
+  max-height: 500px;
+  overflow-y: auto;
 }
 .modal__song {
+  padding: 10px 15px;
+  background: var(--primary);
+  border-radius: 4px;
 }

@@ -1,10 +1,17 @@
 export function getTheBestSong(tracksList) {
   let theBestSong = null;
-  if (tracksList.songs.find((song) => song.theBestSong)) {
+  const bestSong = tracksList.songs.find((song) => song.theBestSong === true);
+  if (bestSong) {
     theBestSong = {
-      cover: tracksList.songs.find((song) => song.theBestSong).cover,
-      musician: tracksList.songs.find((song) => song.theBestSong).musician,
-      songName: tracksList.songs.find((song) => song.theBestSong).songName,
+      cover: bestSong.cover,
+      musician: bestSong.musician,
+      songName: bestSong.songName,
+    };
+  } else {
+    theBestSong = {
+      cover: tracksList.songs[0].cover,
+      musician: tracksList.songs[0].musician,
+      songName: tracksList.songs[0].songName,
     };
   }
 

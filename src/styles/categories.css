@@ -47,6 +47,7 @@
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 22px;
+  text-transform: capitalize;
 }
 
 .categories__name {

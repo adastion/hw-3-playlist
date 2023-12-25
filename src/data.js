@@ -268,6 +268,7 @@ let sortDirection = {
   direction: null,
   selector: "descending",
 };
+let loadedFileUrl = null;
 
 export function subscribe(listener) {
   subscriber = listener;
@@ -318,4 +319,35 @@ export function setSortSongs(direction) {
 
 export function getSortDirection() {
   return sortDirection;
+}
+
+export function createNewPlaylist(namePlaylist, urlSongs) {
+  const songs = urlSongs.map((info, index) => {
+    return {
+      id: index + "bla",
+      musician: "" || "unknown",
+      songName: info.name,
+      year: 1989,
+      isHot: false,
+      theBestSong: false,
+      fileUrl: info.url,
+      cover: "" || "../src/assets/images/not-cover.jpg",
+      info: {
+        duration: "4:42",
+        totalTracksCount: 12,
+      },
+    };
+  });
+
+  playlists.unshift({
+    title: namePlaylist,
+    songs: songs,
+  });
+
+  subscriber();
+}
+
+export function setFileUrl(fileUrl) {
+  loadedFileUrl = fileUrl;
+  subscriber();
 }
