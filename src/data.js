@@ -339,7 +339,7 @@ export function createNewPlaylist(namePlaylist, urlSongs) {
   });
 
   playlists.unshift({
-    title: namePlaylist,
+    title: namePlaylist || "my new playlist",
     songs: songs,
   });
 
