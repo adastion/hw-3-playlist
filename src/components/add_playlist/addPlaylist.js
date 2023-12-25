@@ -45,7 +45,7 @@ export function addPlaylist(parentItem) {
   inputFileElement.classList.add("modal__add-file");
   inputFileElement.id = "addSong";
   inputFileElement.type = "file";
-  inputFileElement.accept = "audio/.mp3";
+  inputFileElement.accept = "audio/mpeg, audio/mp3";
   inputFileElement.multiple = true;
 
   const buttonDownload = document.createElement("button");

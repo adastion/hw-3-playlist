@@ -330,7 +330,7 @@ export function createNewPlaylist(namePlaylist, urlSongs) {
       isHot: false,
       theBestSong: false,
       fileUrl: info.url,
-      cover: "" || "../src/assets/images/not-cover.jpg",
+      cover: "" || "src/assets/images/not-cover.jpg",
       info: {
         duration: "4:42",
         totalTracksCount: 12,
