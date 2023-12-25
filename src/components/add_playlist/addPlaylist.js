@@ -27,8 +27,17 @@ export function addPlaylist(parentItem) {
   const previewFilesElement = document.createElement("ul");
   previewFilesElement.classList.add("modal__list-songs");
 
+  const formElement = document.createElement("form");
+  formElement.classList.add("modal__form")
+  
+  
+  const fieldForNamePlaylist = document.createElement("input");
+  fieldForNamePlaylist.classList.add("btn", "modal__description");
+  fieldForNamePlaylist.type = "text";
+  fieldForNamePlaylist.placeholder = "Name your playlist";
+
   const buttonLoad = document.createElement("label");
-  buttonLoad.classList.add("btn", "modal__description");
+  buttonLoad.classList.add("btn");
   buttonLoad.textContent = "select files";
   buttonLoad.htmlFor = "addSong";
 
@@ -44,16 +53,18 @@ export function addPlaylist(parentItem) {
   buttonDownload.textContent = "create";
 
   headerElement.append(titleElement);
-  contentElement.append(buttonCloseElement);
   contentElement.append(headerElement);
-  contentElement.append(buttonLoad);
-  contentElement.append(inputFileElement);
+  formElement.append(buttonCloseElement);
+  formElement.append(fieldForNamePlaylist);
+  formElement.append(buttonLoad);
+  formElement.append(inputFileElement);
 
-  contentElement.append(
+  formElement.append(
     loadInfoSelectedFiles(previewFilesElement, inputFileElement)
   );
 
-  contentElement.append(buttonDownload);
+  formElement.append(buttonDownload);
+  contentElement.append(formElement);
   modalElement.append(contentElement);
   parentItem.append(modalElement);
 
@@ -77,8 +88,11 @@ export function addPlaylist(parentItem) {
   });
 
   buttonDownload.addEventListener("click", () => {
-
-    createNewPlaylist("red", returnInfoSongs());
+    fieldForNamePlaylist.addEventListener("submit", (event)=> event.preventDefault())
+    const newNamePlaylist = fieldForNamePlaylist.value;
+    
+    createNewPlaylist(newNamePlaylist, returnInfoSongs());
+    
     modalElement.classList.remove("active");
     document.querySelector("body").classList.remove("hidden");
   });
