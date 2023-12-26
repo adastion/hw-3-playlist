@@ -89,7 +89,7 @@ export function addPlaylist(parentItem) {
 
   buttonDownload.addEventListener("click", () => {
     fieldForNamePlaylist.addEventListener("submit", (event)=> event.preventDefault())
-    const newNamePlaylist = fieldForNamePlaylist.value;
+    let newNamePlaylist = fieldForNamePlaylist.value;
     
     createNewPlaylist(newNamePlaylist, returnInfoSongs());
     

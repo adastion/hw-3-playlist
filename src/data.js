@@ -324,7 +324,7 @@ export function createNewPlaylist(namePlaylist, urlSongs) {
   const songs = urlSongs.map((info, index) => {
     return {
       id: index + "bla",
-      musician: "" || "unknown",
+      musician: namePlaylist || "unknown",
       songName: info.name,
       year: 1989,
       isHot: false,
