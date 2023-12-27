@@ -21,7 +21,7 @@
 }
 
 .categories__cover {
-  max-width: 170px;
+  max-width: 150px;
   overflow: hidden;
   position: relative;
   z-index: 1;
