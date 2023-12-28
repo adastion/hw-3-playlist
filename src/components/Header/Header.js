@@ -1,7 +1,7 @@
 import { getPathStatic } from "../../data.js";
-import { renderButtonTogleTheme } from "./renderButtonTogleTheme.js";
+import { ButtonToggleTheme } from "./ButtonToggleTheme/ButtonToggleTheme.js";
 
-export function renderHeader(parentItem) {
+export function Header(parentItem) {
   const logoData = getPathStatic();
 
   const headerElement = document.createElement("header");
@@ -22,5 +22,9 @@ export function renderHeader(parentItem) {
   headerElement.append(containerElement);
   parentItem.append(headerElement);
 
-  renderButtonTogleTheme(containerElement);
+  const buttonToggle = ButtonToggleTheme();
+
+  containerElement.append(buttonToggle);
+
+  return headerElement;
 }

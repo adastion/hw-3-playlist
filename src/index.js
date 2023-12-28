@@ -1,5 +1,5 @@
 import { addPlaylist } from "./components/add_playlist/addPlaylist.js";
-import { renderHeader } from "./components/header/renderHeader.js";
+import { Header } from "./components/Header/Header.js";
 import { playOnlyOne } from "./components/playOnlyOne.js";
 import { renderPlaylist } from "./components/playlist/playlist_wrapper/renderPlaylist.js";
 import { renderContentPanel } from "./components/renderContentPanel.js";
@@ -12,10 +12,10 @@ export function renderApp() {
   rootElement.classList.add("wrapper");
   rootElement.innerHTML = "";
 
-  const Header = renderHeader(rootElement);
-  const Panel = renderContentPanel(rootElement);
-  const Playlists = renderPlaylist(rootElement);
-  const MusicList = addPlaylist(rootElement);
+  const header = Header(rootElement);
+  const panel = renderContentPanel(rootElement);
+  const playlists = renderPlaylist(rootElement);
+  const musicList = addPlaylist(rootElement);
   playOnlyOne();
 
   return rootElement;

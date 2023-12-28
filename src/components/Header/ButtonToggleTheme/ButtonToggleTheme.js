@@ -1,7 +1,7 @@
-import { getPathStatic } from "../../data.js";
-import { iconElement } from "./../iconElement.js";
+import { getPathStatic } from "../../../data.js";
+import { iconElement } from "../../iconElement.js";
 
-export function renderButtonTogleTheme(parentItem) {
+export function ButtonToggleTheme() {
   let currentTheme = localStorage.getItem("currentTheme");
 
   if (!currentTheme) {
@@ -43,5 +43,6 @@ export function renderButtonTogleTheme(parentItem) {
   });
 
   buttonToggleTheme.append(iconTheme);
-  parentItem.append(buttonToggleTheme);
+
+  return buttonToggleTheme;
 }
