@@ -50,13 +50,13 @@
 }
 
 .modal__description {
-  background: var(--secondary_bg);
-  color: var(--primary);
+  background: var(--primary);
+  color: var(--secondary);
   padding: 10px;
 }
 
 .modal__description::placeholder {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .modal__add-file {
