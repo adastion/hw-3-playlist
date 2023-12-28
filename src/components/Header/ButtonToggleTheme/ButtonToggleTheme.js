@@ -1,46 +1,44 @@
 import { getPathStatic } from "../../../data.js";
 import { iconElement } from "../../iconElement.js";
+import { renderTheme } from "./themeUtils/renderTheme.js";
+import { toggleTheme } from "./themeUtils/toggleTheme.js";
 
 export function ButtonToggleTheme() {
-  let currentTheme = localStorage.getItem("currentTheme");
-
-  if (!currentTheme) {
-    localStorage.setItem("currentTheme", "dark");
-  }
-
   const buttonToggleTheme = document.createElement("button");
   buttonToggleTheme.classList.add("btn", "btn--toggle-theme");
 
+  const currentPath = document.querySelector(".logo");
+  const kitColors = document.querySelector("body");
   const iconTheme = iconElement("src/assets/images/sprite-icon.svg#icon-moon");
 
-  const currentPath = document.querySelector(".logo");
+  const iconPath = {
+    dark: getPathStatic().pathLogo.forDark,
+    light: getPathStatic().pathLogo.forLight,
+  };
 
-  const kitColors = document.querySelector("body");
+  let currentTheme = localStorage.getItem("currentTheme");
 
-  if (currentTheme === "dark") {
-    kitColors.setAttribute("data-theme", currentTheme);
-    currentPath.src = getPathStatic().pathLogo.forDark;
+  if (!currentTheme) {
+    currentTheme = "dark";
+    localStorage.setItem("currentTheme", currentTheme);
   }
 
-  if (localStorage.getItem("currentTheme") === "light") {
-    kitColors.setAttribute("data-theme", localStorage.getItem("currentTheme"));
-    currentPath.src = getPathStatic().pathLogo.forLight;
-    buttonToggleTheme.classList.add("light-theme");
-  }
+  renderTheme(
+    currentTheme,
+    iconPath,
+    kitColors,
+    currentPath,
+    buttonToggleTheme
+  );
 
-  buttonToggleTheme.addEventListener("click", () => {
-    if (localStorage.getItem("currentTheme") === "dark") {
-      localStorage.setItem("currentTheme", "light");
-      kitColors.setAttribute("data-theme", "light");
-      buttonToggleTheme.classList.add("light-theme");
-      currentPath.src = getPathStatic().pathLogo.forLight;
-    } else if (localStorage.getItem("currentTheme") === "light") {
-      localStorage.setItem("currentTheme", "dark");
-      kitColors.setAttribute("data-theme", "dark");
-      buttonToggleTheme.classList.remove("light-theme");
-      currentPath.src = getPathStatic().pathLogo.forDark;
-    }
-  });
+  toggleTheme(
+    renderTheme,
+    buttonToggleTheme,
+    currentTheme,
+    iconPath,
+    kitColors,
+    currentPath
+  );
 
   buttonToggleTheme.append(iconTheme);
 

@@ -23,7 +23,6 @@ export function Header(parentItem) {
   parentItem.append(headerElement);
 
   const buttonToggle = ButtonToggleTheme();
-
   containerElement.append(buttonToggle);
 
   return headerElement;
