@@ -5,18 +5,20 @@ import { renderPlaylist } from "./components/playlist/playlist_wrapper/renderPla
 import { renderContentPanel } from "./components/renderContentPanel.js";
 import { subscribe } from "./data.js";
 
-export const rootElement = document.getElementById("root");
-rootElement.classList.add("wrapper");
+subscribe(renderApp);
 
 export function renderApp() {
+  const rootElement = document.getElementById("root");
+  rootElement.classList.add("wrapper");
   rootElement.innerHTML = "";
-  renderHeader(rootElement);
-  renderContentPanel(rootElement);
-  renderPlaylist(rootElement);
+
+  const Header = renderHeader(rootElement);
+  const Panel = renderContentPanel(rootElement);
+  const Playlists = renderPlaylist(rootElement);
+  const MusicList = addPlaylist(rootElement);
   playOnlyOne();
-  addPlaylist(rootElement)
+
+  return rootElement;
 }
 
 renderApp();
-
-subscribe(renderApp);
