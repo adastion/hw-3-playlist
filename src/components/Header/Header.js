@@ -1,29 +1,22 @@
 import { getPathStatic } from "../../data.js";
+import { containerElement } from "../containerElement.js";
 import { ButtonToggleTheme } from "./ButtonToggleTheme/ButtonToggleTheme.js";
+import { Logo } from "./Logo/logo.js";
 
 export function Header(parentItem) {
   const logoData = getPathStatic();
+  const container = containerElement();
+  const logotype = Logo(logoData);
 
   const headerElement = document.createElement("header");
   headerElement.classList.add("header");
 
-  const containerElement = document.createElement("div");
-  containerElement.classList.add("container");
-
-  const logoElement = document.createElement("a");
-  logoElement.href = "/";
-  const imageLogo = document.createElement("img");
-  imageLogo.classList.add("logo");
-  imageLogo.src = logoData.pathLogo.forDark;
-
-  logoElement.append(imageLogo);
-  containerElement.append(logoElement);
-
-  headerElement.append(containerElement);
+  container.append(logotype);
+  headerElement.append(container);
   parentItem.append(headerElement);
 
   const buttonToggle = ButtonToggleTheme();
-  containerElement.append(buttonToggle);
+  container.append(buttonToggle);
 
   return headerElement;
 }
