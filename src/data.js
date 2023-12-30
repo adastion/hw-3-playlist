@@ -1,4 +1,4 @@
-const pathStatic = {
+const staticPaths = {
   pathLogo: {
     forDark: "src/assets/images/logo-dark.svg",
     forLight: "src/assets/images/logo-light.svg",
@@ -258,8 +258,8 @@ export function getPlaylist() {
   return playlists.map((list) => list.songs);
 }
 
-export function getPathStatic() {
-  return pathStatic;
+export function getstaticPaths() {
+  return staticPaths;
 }
 
 let searchTerm = "";

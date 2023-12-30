@@ -1,4 +1,4 @@
-// import { Header } from "./components/Header/Header.js";
+import { Header } from "./components/Header/Header.js";
 import { subscribe } from "./data.js";
 
 subscribe(renderApp);
@@ -8,7 +8,8 @@ export function renderApp() {
   rootElement.classList.add("wrapper");
   rootElement.innerHTML = "";
 
-  Header(rootElement);
+  const header = Header();
+  rootElement.append(header);
 
   // playOnlyOne();
   return rootElement;
