@@ -13,10 +13,8 @@ export function Header(parentItem) {
 
   container.append(logotype);
   headerElement.append(container);
-  parentItem.append(headerElement);
 
+  parentItem.append(headerElement);
   const buttonToggle = ButtonToggleTheme();
   container.append(buttonToggle);
-
-  return headerElement;
 }

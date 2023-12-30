@@ -11,12 +11,12 @@ export function renderApp() {
   const rootElement = document.getElementById("root");
   rootElement.classList.add("wrapper");
   rootElement.innerHTML = "";
-  
-  Header(rootElement)
+
+  Header(rootElement);
   const panel = renderContentPanel(rootElement);
   const playlists = renderPlaylist(rootElement);
   const musicList = addPlaylist(rootElement);
-  rootElement.append(Header())
+  
   
   playOnlyOne();
   return rootElement;
