@@ -1,6 +1,5 @@
 const currentTheme = localStorage.getItem("currentTheme");
 
-console.log(currentTheme);
 export function Logo(path) {
   const logoElement = document.createElement("a");
   logoElement.href = "#";

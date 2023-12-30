@@ -1,6 +1,7 @@
 import { getstaticPaths } from "../../data.js";
 import { containerElement } from "./../containerElement.js";
 import { Logo } from "./Logo/Logo.js";
+import { ThemeSwitchButton } from "./ThemeSwitchButton/ThemeSwitchButton.js";
 
 const imagePath = getstaticPaths();
 
@@ -10,10 +11,10 @@ export function Header() {
 
   const container = containerElement();
   const logo = Logo(imagePath.pathLogo);
-  // const switchButton = ThemeSwitchButton();
+  const switchButton = ThemeSwitchButton();
 
   container.append(logo);
-  // container.append(switchButton);
+  container.append(switchButton);
   headerElement.append(container);
 
   return headerElement;
