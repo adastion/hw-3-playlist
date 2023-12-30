@@ -87,8 +87,7 @@ body[data-theme="light"] {
 }
 
 *::-webkit-scrollbar {
-  width: 14px;
-  border-radius: 8px;
+  width: 6px;
 }
 
 *::-webkit-scrollbar-track {
