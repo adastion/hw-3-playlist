@@ -1,17 +1,14 @@
-import { getstaticPaths } from "../../data.js";
 import { containerElement } from "./../containerElement.js";
-import { Logo } from "./Logo/Logo.js";
+import { createLogoElement } from "./Logo/createLogoElement.js";
 import { ThemeSwitchButton } from "./ThemeSwitchButton/ThemeSwitchButton.js";
 
-const imagePath = getstaticPaths();
-
 export function Header() {
-  const headerElement = document.createElement("section");
+  const headerElement = document.createElement("div");
   headerElement.classList.add("header");
 
   const container = containerElement();
-  const logo = Logo(imagePath.pathLogo);
-  const switchButton = ThemeSwitchButton();
+  const logo = createLogoElement();
+  const switchButton = ThemeSwitchButton(logo);
 
   container.append(logo);
   container.append(switchButton);

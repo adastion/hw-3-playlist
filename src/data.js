@@ -258,7 +258,7 @@ export function getPlaylist() {
   return playlists.map((list) => list.songs);
 }
 
-export function getstaticPaths() {
+export function getStaticPaths() {
   return staticPaths;
 }
 
