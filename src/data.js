@@ -250,12 +250,8 @@ const playlists = [
   },
 ];
 
-export function getPlaylistWithInfo() {
+export function getPlaylists() {
   return playlists;
-}
-
-export function getPlaylist() {
-  return playlists.map((list) => list.songs);
 }
 
 export function getStaticPaths() {
@@ -275,8 +271,10 @@ export function subscribe(listener) {
 
 // getter
 export function getFullListTracks() {
-  const fullSongs = getPlaylist().reduce((tracks, array) => {
-    return tracks.concat(array);
+  const fullPlaylists = getPlaylists();
+  const fullListSongs = fullPlaylists.map((listSongs) => listSongs.songs);
+  const fullSongs = fullListSongs.reduce((track, array) => {
+    return track.concat(array);
   }, []);
 
   const filteredSongs = fullSongs.filter((song) => {
